@@ -14,7 +14,7 @@ const sky = new Author('sky', new Date(1944, 1, 1));
 console.log(jonny);
 console.log(billy);
 const authors = [jonny, billy, jane, kent ];
-const authors2 = [sky, toto, jane, sam ];
+//const authors2 = [sky, toto, jane, sam ];
 
 
 
@@ -43,9 +43,9 @@ console.log(vik);
 // julia.removeFriend(vik);
 
 let book1 = new Book('book1', 1256, yura, authors);
-let book2 = new Book('book2', 1256, julia, authors2);
+let book2 = new Book('book2', 1256, julia, authors);
 let book3 = new Book('book3', 1256, serg, authors);
-let book4 = new Book('book4', 1256, julia, authors2);
+let book4 = new Book('book4', 1256, julia, authors);
 let book5 = new Book('book5', 1256, serg, authors);
 
 console.log(book1);
@@ -60,7 +60,7 @@ julia.likeBook(book1);
 
 yura.likeBook(book1);
 yura.likeBook(book4);
-yura.likeBook( new Book('book6', 1256, julia, authors2));
+yura.likeBook( new Book('book6', 1256, julia, authors));
 serg.likeBook(book1);
 
 
@@ -80,7 +80,7 @@ console.log(julia.publishedBooks);
 
 
 
-const book1984 = new Book('1984', new Date(1949, 5, 8), serg, authors2);
+const book1984 = new Book('1984', new Date(1949, 5, 8), serg, authors);
 
 console.log(book1984);
 
