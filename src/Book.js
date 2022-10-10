@@ -31,11 +31,11 @@ export function Book(title, year, publicationBy, authors) {
             return this.authors.reduce((accum, author) => {
                 let publicators = author.books.map((book) => book.publicationBy);
                 let uniquePublicators = new Set(publicators);
-console.log(uniquePublicators);
+                console.log(uniquePublicators);
                 return [...uniquePublicators];
             }, [])
-            .filter((publicator) => publicator !== this.publicationBy)
-                .map(({name}) => name).join(', ');
+                .filter((publicator) => publicator !== this.publicationBy)
+               .map(({name}) => name).join(', ');
         }
     });
 
@@ -43,18 +43,18 @@ console.log(uniquePublicators);
     Object.defineProperty(this, 'suggestedBooks', {
         get() {
             return this.authors.reduce((accum, author) => {
-                let authorsBooks = author.books.map(({title}) => title);
+                let authorsBooks = author.books.map((book) => book);
                 let uniqueBooks = new Set(authorsBooks);
-
+                console.log(authorsBooks);
+                console.log(uniqueBooks);
                 return [...uniqueBooks];
-            }, []).join(', ');
 
-            console.log(authorsBooks);
-            console.log(uniqueBooks);
 
-            // .filter((book) => book !== this.book)
-                // .map(({name}) => name).join(', ');
+            }, [])
+                .filter((book) => book !== this)
+               .map(({title}) => title).join(', ');
         }
+
     });
 
 }

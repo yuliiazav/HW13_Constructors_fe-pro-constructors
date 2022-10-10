@@ -14,7 +14,7 @@ const sky = new Author('sky', new Date(1944, 1, 1));
 console.log(jonny);
 console.log(billy);
 const authors = [jonny, billy, jane, kent ];
-//const authors2 = [sky, toto, jane, sam ];
+const authors2 = [sky, toto, jane, sam ];
 
 
 
@@ -44,9 +44,12 @@ console.log(vik);
 
 let book1 = new Book('book1', 1256, yura, authors);
 let book2 = new Book('book2', 1256, julia, authors);
-let book3 = new Book('book3', 1256, serg, authors);
+let book3 = new Book('book3', 1256, serg, authors2);
 let book4 = new Book('book4', 1256, julia, authors);
-let book5 = new Book('book5', 1256, serg, authors);
+let book5 = new Book('book5', 1256, serg, authors2);
+let book6 = new Book('book6', 1256, serg, authors);
+
+
 
 console.log(book1);
 console.log(book2);
@@ -60,7 +63,7 @@ julia.likeBook(book1);
 
 yura.likeBook(book1);
 yura.likeBook(book4);
-yura.likeBook( new Book('book6', 1256, julia, authors));
+yura.likeBook(book6);
 serg.likeBook(book1);
 
 
@@ -68,7 +71,7 @@ yura.unlikeBook(book1);
 console.log(book1);
 
 console.log(yura.friendsNames);
-//console.log(yura.likeBook);
+console.log(yura.likeBook);
 
 console.log(yura.likes);
 console.log(yura.likedBooks);
@@ -80,12 +83,19 @@ console.log(julia.publishedBooks);
 
 
 
-const book1984 = new Book('1984', new Date(1949, 5, 8), serg, authors);
+const book1984 = new Book('1984', new Date(1949, 5, 8), serg, authors2);
 
 console.log(book1984);
 
 console.log(book1984.suggestedPublicators);
+console.log(book1.suggestedPublicators);
+console.log(book4.suggestedPublicators);
+console.log(book2.suggestedPublicators);
 
-console.log(book1984.suggestedBooks);
+console.log(book3.suggestedBooks);
+
+console.log(book5.suggestedBooks);
+console.log(book1.suggestedBooks);
+console.log(book3.suggestedBooks);
 
 
